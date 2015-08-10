@@ -410,6 +410,13 @@ class SimpleLDAPLogin {
 			}
 
 			$result =  (bool)(count( array_intersect($user_groups, $groups) ) > 0);
+
+		    if (!$result) {
+                // Maybe with members listed in groups?
+                $result = ldap_search($this->ldap, preg_replace('/^ou=\w+,/i', '', $this->get_setting('base_dn')), '(&(memberUid=' . $username . ')(|(cn=' . implode(')(cn=', $groups) . ')))', array('cn'));
+                $ldapgroups = ldap_get_entries($this->ldap, $result);
+                $result = (bool)($ldapgroups["count"] > 0);
+            }
 		}
 
 		return apply_filters($this->prefix . 'user_has_groups', $result);
