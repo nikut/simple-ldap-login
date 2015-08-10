@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Simple LDAP Login
+Plugin Name: Sulake Simple LDAP Login
 Plugin URI: http://clifgriffin.com/simple-ldap-login/
 Description:  Authenticate WordPress against LDAP.
 Version: 1.5.5-sulake
