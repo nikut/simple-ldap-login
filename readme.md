@@ -1,10 +1,10 @@
 # Plugin Name #
-**Contributors:** clifgriffin  
+**Contributors:** clifgriffin, nikut  
 **Donate link:** http://cgd.io  
 **Tags:** LDAP, authentication, login, active directory, adLDAP  
 **Requires at least:** 3.4  
 **Tested up to:** 3.6  
-**Stable tag:** 1.5.5  
+**Stable tag:** 1.5.5-sulake  
 **License:** GPLv2 or later  
 
 Integrating WordPress with LDAP shouldn't be difficult. Now it isn't. Simple LDAP Login provides all of the features, none of the hassles.
